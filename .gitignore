@@ -1,33 +1,38 @@
-# data and outputs
-data/raw/
-data_raw/
-data_working/
-
-# allow processed data to be tracked
-!data/
-!data/processed/
-!data/processed/**      
-
+# ----------------------------
+# Python / Jupyter artifacts
+# ----------------------------
 .ipynb_checkpoints/
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# ----------------------------
+# macOS
+# ----------------------------
 .DS_Store
 
-# environments
+# ----------------------------
+# Virtual environments
+# ----------------------------
 .venv/
 venv/
 env/
 
-# data and outputs (do not push)
-data/
+# ----------------------------
+# Data and outputs
+#   - ignore raw & working
+#   - keep processed tracked
+# ----------------------------
+data/*          # ignore everything under data/ by default
+!data/processed/        # but keep processed/
+!data/processed/**      # and everything inside it
+data/raw/       # raw stays ignored
+
 data_raw/
 data_working/
 
-# optional large files
+# ----------------------------
+# Optional large archives
+# ----------------------------
 *.zip
-*.parquet
-*.csv
-*.pkl
-*.joblib
