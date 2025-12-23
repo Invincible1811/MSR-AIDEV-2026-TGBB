@@ -1,3 +1,13 @@
+# data and outputs
+data/raw/
+data_raw/
+data_working/
+
+# allow processed data to be tracked
+!data/
+!data/processed/
+!data/processed/**      
+
 .ipynb_checkpoints/
 __pycache__/
 *.pyc
